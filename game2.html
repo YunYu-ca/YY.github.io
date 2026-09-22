@@ -1144,5 +1144,27 @@
         initGame();
         gameLoop();
     </script>
+    <style>
+        @media (max-width: 960px) {
+            body { overflow: auto; }
+        }
+    </style>
+    <script>
+        (function () {
+            function fit() {
+                var base = 960;
+                var s = Math.min(1, window.innerWidth / base);
+                document.body.style.zoom = s;
+                var totalH = 900 * s;
+                var pad = Math.max(0, (window.innerHeight - totalH) / 2);
+                document.body.style.minHeight = 'auto';
+                document.body.style.justifyContent = 'flex-start';
+                document.body.style.paddingTop = (pad / s) + 'px';
+            }
+            fit();
+            window.addEventListener('resize', fit);
+            window.addEventListener('orientationchange', fit);
+        })();
+    </script>
 </body>
 </html>

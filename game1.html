@@ -9111,5 +9111,30 @@
         ">🔊</button>
     </div>
 
+
+    <style>
+        @media (max-width: 960px) {
+            body { overflow: auto; }
+        }
+    </style>
+    <script>
+        (function () {
+            function fit() {
+                document.body.style.zoom = '';
+                var baseW = document.body.scrollWidth;
+                var s = Math.min(1, window.innerWidth / baseW);
+                document.body.style.zoom = s;
+                var totalH = document.body.scrollHeight * s;
+                var pad = Math.max(0, (window.innerHeight - totalH) / 2);
+                document.body.style.minHeight = 'auto';
+                document.body.style.justifyContent = 'flex-start';
+                document.body.style.paddingTop = (pad / s) + 'px';
+            }
+            fit();
+            window.addEventListener('resize', fit);
+            window.addEventListener('orientationchange', fit);
+        })();
+    </script>
+
 </body>
 </html>
