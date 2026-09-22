@@ -94,7 +94,7 @@
 
   /* ===== 游戏卡片 ===== */
   .grid{
-    display:grid;grid-template-columns:repeat(3,1fr);
+    display:grid;grid-template-columns:repeat(4,1fr);
     gap:26px;margin-top:14px;
   }
   .game-card{
@@ -112,6 +112,7 @@
   .game-card.c1::before{background:var(--gold);}
   .game-card.c2::before{background:var(--neon);}
   .game-card.c3::before{background:var(--blue);}
+  .game-card.c4::before{background:var(--magenta);}
   .game-card:hover{
     transform:translate(-3px,-3px);
     box-shadow:10px 10px 0 var(--shadow);
@@ -119,6 +120,7 @@
   .game-card.c1:hover{border-color:var(--gold);}
   .game-card.c2:hover{border-color:var(--neon);}
   .game-card.c3:hover{border-color:var(--blue);}
+  .game-card.c4:hover{border-color:var(--magenta);}
   .cover{position:relative;overflow:hidden;aspect-ratio:3/2;}
   .cover img{
     width:100%;height:100%;object-fit:cover;display:block;
@@ -165,9 +167,11 @@
   .game-card.c1 .play{background:var(--gold);box-shadow:0 5px 0 #a37900;color:#0b0b13;}
   .game-card.c2 .play{background:var(--neon);box-shadow:0 5px 0 #0b7280;color:#0b0b13;}
   .game-card.c3 .play{background:var(--blue);box-shadow:0 5px 0 #1d4f8c;color:#0b0b13;}
+  .game-card.c4 .play{background:var(--magenta);box-shadow:0 5px 0 #7a1038;color:#0b0b13;}
   .play:hover{transform:translateY(2px);box-shadow:0 2px 0 #0b7280;}
   .game-card.c1 .play:hover{box-shadow:0 2px 0 #a37900;}
   .game-card.c3 .play:hover{box-shadow:0 2px 0 #1d4f8c;}
+  .game-card.c4 .play:hover{box-shadow:0 2px 0 #7a1038;}
   .play svg{width:13px;height:13px;fill:currentColor;}
 
   /* ===== Footer ===== */
@@ -200,7 +204,7 @@
         <span class="dot"></span>YUNYU GAME ARCADE<span class="dot"></span>
       </div>
       <h1>像素游戏厅</h1>
-      <p class="lead">由 YunYu-ca 制作的三个小游戏，点开就能玩。</p>
+      <p class="lead">由 YunYu-ca 制作的四个小游戏，点开就能玩。</p>
       <div class="hint">SELECT A GAME</div>
     </header>
 
@@ -251,6 +255,23 @@
           <div class="game-en">PIXEL TOWER DEFENSE</div>
           <p class="desc">在蜿蜒的路径上部署防御塔，阻击一波波逼近的怪物，守住你的水晶与金币。</p>
           <div class="tags"><span>塔防</span><span>策略</span><span>闯关</span></div>
+          <span class="play">
+            <svg viewBox="0 0 16 16"><path d="M4 2 L14 8 L4 14 Z"/></svg>
+            开始游戏
+          </span>
+        </div>
+      </a>
+
+      <a class="game-card c4" href="https://4kxftbp19qess.doubaoapps.com/app/app_17emqccrkjk" target="_blank" rel="noopener">
+        <div class="cover">
+          <img src="assets/game4.png" alt="种植农场 封面">
+          <span class="idx">GAME 4</span>
+        </div>
+        <div class="body">
+          <div class="game-name">种植农场</div>
+          <div class="game-en">PIXEL FARM</div>
+          <p class="desc">注册账号开垦田地，种下作物浇水施肥，等它成熟收获换金币。退出自动存档，云端永久保存你的农场。</p>
+          <div class="tags"><span>种植</span><span>经营</span><span>云端存档</span></div>
           <span class="play">
             <svg viewBox="0 0 16 16"><path d="M4 2 L14 8 L4 14 Z"/></svg>
             开始游戏
