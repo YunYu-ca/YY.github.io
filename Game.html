@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YunYu 的像素游戏厅</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b0b13'/%3E%3Crect x='2' y='2' width='5' height='5' fill='%2322d3ee'/%3E%3Crect x='9' y='2' width='5' height='5' fill='%23ffd700'/%3E%3Crect x='2' y='9' width='5' height='5' fill='%23ff3d6e'/%3E%3Crect x='9' y='9' width='5' height='5' fill='%234a9eff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Press+Start+2P&display=swap">
+<style>
+  :root{
+    --bg:#0b0b13;
+    --panel:#14141f;
+    --panel-2:#1a1a27;
+    --line:#2a2a3c;
+    --neon:#22d3ee;
+    --gold:#ffd700;
+    --magenta:#ff3d6e;
+    --blue:#4a9eff;
+    --text:#e9e9f2;
+    --muted:#9a9ab0;
+    --shadow:#05050a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+    line-height:1.7;
+    min-height:100vh;
+    position:relative;
+    overflow-x:hidden;
+  }
+  /* 像素网格背景 */
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(34,211,238,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,0.045) 1px, transparent 1px);
+    background-size:32px 32px;
+  }
+  /* CRT 扫描线 */
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:repeating-linear-gradient(
+      0deg, rgba(0,0,0,0.12) 0px, rgba(0,0,0,0.12) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode:multiply;
+  }
+  .wrap{
+    position:relative;z-index:1;
+    max-width:1180px;margin:0 auto;padding:56px 28px 72px;
+  }
+
+  /* ===== Hero ===== */
+  .hero{text-align:center;padding:34px 0 46px;}
+  .brand{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:"Press Start 2P","Courier New",monospace;
+    font-size:clamp(10px,2.6vw,13px);
+    color:var(--neon);letter-spacing:2px;
+    margin-bottom:26px;
+  }
+  .brand .dot{width:9px;height:9px;background:var(--gold);display:inline-block;}
+  .brand .dot:last-child{background:var(--magenta);}
+  h1{
+    font-family:"Press Start 2P","Courier New",monospace;
+    font-size:clamp(26px,6vw,52px);
+    color:var(--gold);
+    letter-spacing:3px;
+    text-shadow:4px 4px 0 var(--magenta), -3px -3px 0 rgba(34,211,238,0.5);
+    margin-bottom:22px;
+    line-height:1.25;
+  }
+  .hero p.lead{
+    color:var(--muted);
+    font-size:clamp(15px,2.4vw,18px);
+    max-width:560px;margin:0 auto;
+  }
+  .hero .hint{
+    margin-top:30px;
+    display:inline-block;
+    padding:9px 18px;
+    border:2px solid var(--line);
+    color:var(--neon);
+    font-family:"Press Start 2P","Courier New",monospace;
+    font-size:11px;letter-spacing:1px;
+    box-shadow:4px 4px 0 var(--shadow);
+    animation:blink 1.6s steps(2,start) infinite;
+  }
+  @keyframes blink{50%{opacity:0.35;}}
+
+  /* ===== 游戏卡片 ===== */
+  .grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:26px;margin-top:14px;
+  }
+  .game-card{
+    display:flex;flex-direction:column;
+    background:var(--panel);
+    border:1px solid var(--line);
+    box-shadow:6px 6px 0 var(--shadow);
+    text-decoration:none;color:inherit;
+    transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    position:relative;
+  }
+  .game-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  }
+  .game-card.c1::before{background:var(--gold);}
+  .game-card.c2::before{background:var(--neon);}
+  .game-card.c3::before{background:var(--blue);}
+  .game-card:hover{
+    transform:translate(-3px,-3px);
+    box-shadow:10px 10px 0 var(--shadow);
+  }
+  .game-card.c1:hover{border-color:var(--gold);}
+  .game-card.c2:hover{border-color:var(--neon);}
+  .game-card.c3:hover{border-color:var(--blue);}
+  .cover{position:relative;overflow:hidden;aspect-ratio:16/9;}
+  .cover img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    image-rendering:auto;
+    transition:transform .3s ease;
+  }
+  .game-card:hover .cover img{transform:scale(1.05);}
+  .cover .idx{
+    position:absolute;top:12px;left:12px;
+    background:rgba(5,5,10,0.78);
+    color:var(--text);
+    font-family:"Press Start 2P","Courier New",monospace;
+    font-size:10px;letter-spacing:1px;
+    padding:7px 10px;border:1px solid rgba(255,255,255,0.18);
+  }
+  .body{padding:22px 20px 20px;display:flex;flex-direction:column;flex:1;}
+  .game-name{
+    font-size:21px;font-weight:700;color:var(--text);letter-spacing:.5px;
+  }
+  .game-en{
+    font-family:"Press Start 2P","Courier New",monospace;
+    font-size:10px;color:var(--muted);letter-spacing:1px;
+    margin-top:7px;word-break:break-word;
+  }
+  .desc{
+    color:var(--muted);font-size:14.5px;margin:14px 0 16px;flex:1;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+  .tags span{
+    font-size:12px;color:var(--text);
+    border:1px solid var(--line);
+    background:var(--panel-2);
+    padding:3px 10px;
+  }
+  .play{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:"Press Start 2P","Courier New",monospace;
+    font-size:11px;letter-spacing:1px;
+    color:#0b0b13;background:var(--neon);
+    padding:14px 16px;text-decoration:none;
+    box-shadow:0 5px 0 #0b7280;
+    transition:transform .1s ease, box-shadow .1s ease;
+  }
+  .game-card.c1 .play{background:var(--gold);box-shadow:0 5px 0 #a37900;color:#0b0b13;}
+  .game-card.c2 .play{background:var(--neon);box-shadow:0 5px 0 #0b7280;color:#0b0b13;}
+  .game-card.c3 .play{background:var(--blue);box-shadow:0 5px 0 #1d4f8c;color:#0b0b13;}
+  .play:hover{transform:translateY(2px);box-shadow:0 2px 0 #0b7280;}
+  .game-card.c1 .play:hover{box-shadow:0 2px 0 #a37900;}
+  .game-card.c3 .play:hover{box-shadow:0 2px 0 #1d4f8c;}
+  .play svg{width:13px;height:13px;fill:currentColor;}
+
+  /* ===== Footer ===== */
+  footer{
+    margin-top:56px;padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:12px 24px;
+    justify-content:space-between;align-items:center;
+    color:var(--muted);font-size:13.5px;
+  }
+  footer a{
+    color:var(--neon);text-decoration:none;border-bottom:1px dashed var(--line);
+  }
+  footer a:hover{color:var(--gold);}
+  .foot-badge{font-family:"Press Start 2P","Courier New",monospace;font-size:9px;letter-spacing:1px;}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:960px){
+    .grid{grid-template-columns:1fr;}
+    .wrap{padding:40px 20px 56px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ===== Hero ===== -->
+    <header class="hero">
+      <div class="brand">
+        <span class="dot"></span>YUNYU GAME ARCADE<span class="dot"></span>
+      </div>
+      <h1>像素游戏厅</h1>
+      <p class="lead">由 YunYu-ca 制作的三个小游戏，点开就能玩。</p>
+      <div class="hint">SELECT A GAME</div>
+    </header>
+
+    <!-- ===== 游戏卡片 ===== -->
+    <section class="grid">
+
+      <a class="game-card c1" href="https://yunyu-ca.github.io/game1.html" target="_blank" rel="noopener">
+        <div class="cover">
+          <img src="assets/survivor.jpg" alt="肉鸽幸存者 封面">
+          <span class="idx">GAME 1</span>
+        </div>
+        <div class="body">
+          <div class="game-name">肉鸽幸存者</div>
+          <div class="game-en">ROGUELIKE SURVIVOR</div>
+          <p class="desc">孤身一人迎战潮水般的怪物。每一次升级都是一次抉择，看你能在这片荒原撑过几波。</p>
+          <div class="tags"><span>Roguelike</span><span>幸存者</span><span>单机</span></div>
+          <span class="play">
+            <svg viewBox="0 0 16 16"><path d="M4 2 L14 8 L4 14 Z"/></svg>
+            开始游戏
+          </span>
+        </div>
+      </a>
+
+      <a class="game-card c2" href="https://yunyu-ca.github.io/game2.html" target="_blank" rel="noopener">
+        <div class="cover">
+          <img src="assets/mech-arena.jpg" alt="MECH ARENA 封面">
+          <span class="idx">GAME 2</span>
+        </div>
+        <div class="body">
+          <div class="game-name">MECH ARENA</div>
+          <div class="game-en">像素机甲对战</div>
+          <p class="desc">双人同屏的机甲格斗，蓝与红的巅峰对决，在霓虹竞技场中拼出最后的赢家。</p>
+          <div class="tags"><span>双人对战</span><span>机甲</span><span>竞技</span></div>
+          <span class="play">
+            <svg viewBox="0 0 16 16"><path d="M4 2 L14 8 L4 14 Z"/></svg>
+            开始游戏
+          </span>
+        </div>
+      </a>
+
+      <a class="game-card c3" href="https://yunyu-ca.github.io/game3.html" target="_blank" rel="noopener">
+        <div class="cover">
+          <img src="assets/tower-defense.jpg" alt="像素塔防 封面">
+          <span class="idx">GAME 3</span>
+        </div>
+        <div class="body">
+          <div class="game-name">像素塔防</div>
+          <div class="game-en">PIXEL TOWER DEFENSE</div>
+          <p class="desc">在蜿蜒的路径上部署防御塔，阻击一波波逼近的怪物，守住你的水晶与金币。</p>
+          <div class="tags"><span>塔防</span><span>策略</span><span>闯关</span></div>
+          <span class="play">
+            <svg viewBox="0 0 16 16"><path d="M4 2 L14 8 L4 14 Z"/></svg>
+            开始游戏
+          </span>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <span class="foot-badge">© 2026 YUNYU-CA</span>
+      <span>游戏托管于 <a href="https://github.com/YunYu-ca/YunYu-ca.github.io" target="_blank" rel="noopener">GitHub Pages</a></span>
+    </footer>
+
+  </div>
+</body>
+</html>
