@@ -1,0 +1,34 @@
+{
+  "archiveData": {
+    "score": 802124,
+    "scoreLevel": 81,
+    "level": 30,
+    "exp": 29050,
+    "clear": {
+      "total": 1,
+      "rewards": []
+    },
+    "endless": {
+      "bestWave": 0,
+      "milestones": []
+    },
+    "kills": {},
+    "killMilestones": {},
+    "fishing": {
+      "score": 0,
+      "total": 0,
+      "best": 0,
+      "fish": {}
+    },
+    "treasure": {},
+    "difficultyUnlock": {
+      "normal-N1": true
+    },
+    "redeemCodes": []
+  },
+  "preview": {
+    "score": 802124,
+    "level": 30,
+    "clearTotal": 1
+  }
+}
