@@ -327,6 +327,7 @@
         }
 
         #cheat-hint {
+            display: none;
             position: absolute;
             bottom: 8px;
             right: 75px;
@@ -5800,6 +5801,28 @@
             mouseX = (e.clientX - rect.left) * scaleX;
             mouseY = (e.clientY - rect.top) * scaleY;
         });
+
+        // ===== 触屏适配：手机上点击放塔 =====
+        canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            const t = e.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            const sx = canvas.width / rect.width;
+            const sy = canvas.height / rect.height;
+            mouseX = (t.clientX - rect.left) * sx;
+            mouseY = (t.clientY - rect.top) * sy;
+            canvas.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+        }, { passive: false });
+
+        canvas.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            const t = e.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            const sx = canvas.width / rect.width;
+            const sy = canvas.height / rect.height;
+            mouseX = (t.clientX - rect.left) * sx;
+            mouseY = (t.clientY - rect.top) * sy;
+        }, { passive: false });
 
         // ============================================
         // 塔升级与删除
