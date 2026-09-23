@@ -1,0 +1,45 @@
+{
+  "archiveData": {
+    "score": 100,
+    "scoreLevel": 1,
+    "level": 2,
+    "exp": 50,
+    "clear": {
+      "total": 1,
+      "rewards": [],
+      "byMode": {
+        "normal": 1
+      }
+    },
+    "endless": {
+      "bestWave": 5,
+      "milestones": [
+        5
+      ]
+    },
+    "kills": {
+      "basic": 10,
+      "fast": 3
+    },
+    "killMilestones": {},
+    "fishing": {
+      "score": 0,
+      "total": 0,
+      "best": 0,
+      "fish": {}
+    },
+    "treasure": {},
+    "difficultyUnlock": {
+      "normal-N1": true,
+      "normal-N2": true,
+      "endless-N1": true
+    },
+    "redeemCodes": [],
+    "hasAutoFishingRod": false
+  },
+  "preview": {
+    "score": 100,
+    "level": 2,
+    "clearTotal": 1
+  }
+}
