@@ -1,0 +1,38 @@
+{
+  "archiveData": {
+    "score": 0,
+    "scoreLevel": 0,
+    "level": 1,
+    "exp": 0,
+    "clear": {
+      "total": 0,
+      "rewards": [],
+      "byMode": {}
+    },
+    "endless": {
+      "bestWave": 0,
+      "milestones": []
+    },
+    "kills": {},
+    "killMilestones": {},
+    "fishing": {
+      "score": 5,
+      "total": 0,
+      "best": 0,
+      "fish": {}
+    },
+    "treasure": {},
+    "difficultyUnlock": {
+      "fishing": true
+    },
+    "redeemCodes": [
+      "LH3778"
+    ],
+    "hasAutoFishingRod": true
+  },
+  "preview": {
+    "score": 0,
+    "level": 1,
+    "clearTotal": 0
+  }
+}
