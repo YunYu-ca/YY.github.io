@@ -1,14 +1,14 @@
 {
   "username": "test_e2e_001",
-  "savedAt": "2026-09-24T13:47:40.611Z",
-  "chipBalance": 3276,
-  "experience": 5,
+  "savedAt": "2026-09-24T13:49:01.165Z",
+  "chipBalance": 3306,
+  "experience": 10,
   "unlockedWheelLevel": 1,
   "lastCheckinDate": "2026-09-24",
   "hasCheckedInToday": true,
   "loanPrincipal": 3226,
   "loanInterestRate": 0.2,
-  "loanGamesRemaining": 9,
+  "loanGamesRemaining": 8,
   "loanTimesToday": 1,
   "lastLoanDate": "2026-09-24"
 }
