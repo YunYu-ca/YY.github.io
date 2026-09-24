@@ -1,9 +1,9 @@
 {
   "username": "tester2026",
-  "savedAt": "2026-09-24T13:07:10.267Z",
-  "chipBalance": 100,
+  "savedAt": "2026-09-24T13:07:58.376Z",
+  "chipBalance": 0,
   "experience": 0,
   "unlockedWheelLevel": 1,
-  "lastCheckinDate": "2026-09-24",
-  "hasCheckedInToday": true
+  "lastCheckinDate": null,
+  "hasCheckedInToday": false
 }
