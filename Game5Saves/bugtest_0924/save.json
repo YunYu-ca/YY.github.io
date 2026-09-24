@@ -1,14 +1,14 @@
 {
   "username": "bugtest_0924",
-  "savedAt": "2026-09-24T14:03:34.082Z",
-  "chipBalance": 100,
+  "savedAt": "2026-09-24T14:05:16.939Z",
+  "chipBalance": 9856,
   "experience": 0,
   "unlockedWheelLevel": 1,
   "lastCheckinDate": "2026-09-24",
   "hasCheckedInToday": true,
-  "loanPrincipal": 0,
+  "loanPrincipal": 9756,
   "loanInterestRate": 0.2,
-  "loanGamesRemaining": 0,
-  "loanTimesToday": 0,
-  "lastLoanDate": null
+  "loanGamesRemaining": 10,
+  "loanTimesToday": 1,
+  "lastLoanDate": "2026-09-24"
 }
