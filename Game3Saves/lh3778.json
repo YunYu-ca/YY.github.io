@@ -1,9 +1,9 @@
 {
   "archiveData": {
-    "score": 5,
+    "score": 7,
     "scoreLevel": 1,
     "level": 1,
-    "exp": 1,
+    "exp": 11,
     "clear": {
       "total": 2,
       "rewards": [],
@@ -17,21 +17,23 @@
     },
     "kills": {
       "boss": 3,
-      "fast": 92,
-      "tank": 48,
+      "fast": 108,
+      "tank": 50,
       "elite": 19,
-      "normal": 146,
+      "normal": 183,
       "zombie": 10
     },
     "killMilestones": {},
     "fishing": {
       "score": 100,
-      "total": 1,
+      "total": 3,
       "best": 0,
       "fish": {}
     },
     "treasure": {
-      "legend_shield": 1
+      "legend_shield": 1,
+      "wind_talisman": 1,
+      "leather_armor": 1
     },
     "difficultyUnlock": {
       "fishing": true,
@@ -43,7 +45,7 @@
     "hasAutoFishingRod": true
   },
   "preview": {
-    "score": 5,
+    "score": 7,
     "level": 1,
     "clearTotal": 2
   }
