@@ -1,10 +1,10 @@
 {
   "username": "e2etieruser924",
-  "savedAt": "2026-09-24T15:23:20.207Z",
-  "chipBalance": 0,
+  "savedAt": "2026-09-24T15:23:42.849Z",
+  "chipBalance": 100,
   "experience": 0,
   "unlockedWheelLevel": 1,
-  "lastCheckinDate": null,
+  "lastCheckinDate": "2026-09-24",
   "hasCheckedInToday": false,
   "loanPrincipal": 0,
   "loanInterestRate": 0.2,
