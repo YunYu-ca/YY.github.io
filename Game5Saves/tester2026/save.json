@@ -1,9 +1,14 @@
 {
   "username": "tester2026",
-  "savedAt": "2026-09-24T13:52:56.316Z",
+  "savedAt": "2026-09-24T13:57:49.419Z",
   "chipBalance": 0,
   "experience": 0,
   "unlockedWheelLevel": 1,
   "lastCheckinDate": null,
-  "hasCheckedInToday": false
+  "hasCheckedInToday": false,
+  "loanPrincipal": 0,
+  "loanInterestRate": 0.2,
+  "loanGamesRemaining": 0,
+  "loanTimesToday": 0,
+  "lastLoanDate": null
 }
