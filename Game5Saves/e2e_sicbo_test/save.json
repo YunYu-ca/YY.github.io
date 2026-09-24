@@ -1,0 +1,14 @@
+{
+  "username": "e2e_sicbo_test",
+  "savedAt": "2026-09-24T15:00:35.633Z",
+  "chipBalance": 0,
+  "experience": 0,
+  "unlockedWheelLevel": 1,
+  "lastCheckinDate": null,
+  "hasCheckedInToday": false,
+  "loanPrincipal": 0,
+  "loanInterestRate": 0.2,
+  "loanGamesRemaining": 0,
+  "loanTimesToday": 0,
+  "lastLoanDate": null
+}
