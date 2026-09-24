@@ -1,20 +1,27 @@
 {
   "archiveData": {
-    "score": 0,
+    "score": 5,
     "scoreLevel": 1,
     "level": 1,
-    "exp": 0,
+    "exp": 1,
     "clear": {
-      "total": 0,
+      "total": 1,
       "rewards": [],
-      "byMode": {}
+      "byMode": {
+        "normal": 1
+      }
     },
     "endless": {
       "bestWave": 0,
       "milestones": []
     },
     "kills": {
-      "normal": 28
+      "normal": 200,
+      "fast": 76,
+      "boss": 3,
+      "tank": 43,
+      "elite": 16,
+      "zombie": 8
     },
     "killMilestones": {},
     "fishing": {
@@ -24,13 +31,15 @@
       "fish": {}
     },
     "treasure": {},
-    "difficultyUnlock": {},
+    "difficultyUnlock": {
+      "normal-N1": true
+    },
     "redeemCodes": [],
     "hasAutoFishingRod": false
   },
   "preview": {
-    "score": 0,
+    "score": 5,
     "level": 1,
-    "clearTotal": 0
+    "clearTotal": 1
   }
 }
