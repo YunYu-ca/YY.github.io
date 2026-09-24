@@ -1,14 +1,14 @@
 {
   "username": "qatest_0925",
-  "savedAt": "2026-09-24T16:10:48.478Z",
-  "chipBalance": 100,
+  "savedAt": "2026-09-24T16:11:00.241Z",
+  "chipBalance": 8195,
   "experience": 0,
   "unlockedWheelLevel": 1,
   "lastCheckinDate": "2026-09-25",
   "hasCheckedInToday": false,
-  "loanPrincipal": 0,
+  "loanPrincipal": 8095,
   "loanInterestRate": 0.2,
-  "loanGamesRemaining": 0,
-  "loanTimesToday": 0,
-  "lastLoanDate": null
+  "loanGamesRemaining": 10,
+  "loanTimesToday": 1,
+  "lastLoanDate": "2026-09-24"
 }
