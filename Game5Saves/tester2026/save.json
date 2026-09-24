@@ -1,10 +1,10 @@
 {
   "username": "tester2026",
-  "savedAt": "2026-09-24T13:59:22.522Z",
-  "chipBalance": 100,
+  "savedAt": "2026-09-24T13:59:32.547Z",
+  "chipBalance": 0,
   "experience": 0,
   "unlockedWheelLevel": 1,
-  "lastCheckinDate": "2026-09-24",
+  "lastCheckinDate": null,
   "hasCheckedInToday": false,
   "loanPrincipal": 0,
   "loanInterestRate": 0.2,
