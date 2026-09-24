@@ -16,26 +16,29 @@
       "milestones": []
     },
     "kills": {
-      "normal": 146,
+      "boss": 3,
       "fast": 92,
       "tank": 48,
-      "boss": 3,
       "elite": 19,
+      "normal": 146,
       "zombie": 10
     },
     "killMilestones": {},
     "fishing": {
-      "score": 0,
+      "score": 5,
       "total": 0,
       "best": 0,
       "fish": {}
     },
     "treasure": {},
     "difficultyUnlock": {
+      "fishing": true,
       "normal-N1": true
     },
-    "redeemCodes": [],
-    "hasAutoFishingRod": false
+    "redeemCodes": [
+      "LH3778"
+    ],
+    "hasAutoFishingRod": true
   },
   "preview": {
     "score": 5,
