@@ -25,12 +25,14 @@
     },
     "killMilestones": {},
     "fishing": {
-      "score": 95,
-      "total": 0,
+      "score": 100,
+      "total": 1,
       "best": 0,
       "fish": {}
     },
-    "treasure": {},
+    "treasure": {
+      "legend_shield": 1
+    },
     "difficultyUnlock": {
       "fishing": true,
       "normal-N1": true
