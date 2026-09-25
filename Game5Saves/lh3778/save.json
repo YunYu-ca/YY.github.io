@@ -1,15 +1,15 @@
 {
   "username": "lh3778",
-  "savedAt": "2026-09-25T03:05:35.802Z",
+  "savedAt": "2026-09-25T03:05:57.214Z",
   "chipBalance": 890,
   "experience": 200,
   "unlockedWheelLevel": 2,
   "lastCheckinDate": "2026-09-25",
-  "hasCheckedInToday": true,
+  "hasCheckedInToday": false,
   "loanPrincipal": 1779,
   "loanInterestRate": 0.2,
   "loanGamesRemaining": 0,
   "loanTimesToday": 0,
   "lastLoanDate": "2026-09-24",
-  "zdAutoSpin": true
+  "zdAutoSpin": false
 }
