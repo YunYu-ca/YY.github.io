@@ -1,6 +1,6 @@
 {
   "username": "lh3778",
-  "savedAt": "2026-09-25T03:42:19.193Z",
+  "savedAt": "2026-09-25T03:42:21.072Z",
   "chipBalance": 19536,
   "experience": 1531,
   "unlockedWheelLevel": 3,
@@ -14,5 +14,5 @@
   "zdAutoSpin": true,
   "zd1": true,
   "zd2": false,
-  "zd3": false
+  "zd3": true
 }
