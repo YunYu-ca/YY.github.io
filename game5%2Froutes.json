@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/login"
+  },
+  {
+    "path": "/"
+  },
+  {
+    "path": "/ten-yuan"
+  },
+  {
+    "path": "/hundred-yuan"
+  },
+  {
+    "path": "/hundred-yuan/sicbo"
+  },
+  {
+    "path": "/thousand-yuan"
+  },
+  {
+    "path": "/thousand-yuan/sicbo"
+  },
+  {
+    "path": "/thousand-yuan/blackjack"
+  },
+  {
+    "path": "/ten-thousand-yuan"
+  },
+  {
+    "path": "/ten-thousand-yuan/sicbo"
+  },
+  {
+    "path": "/ten-thousand-yuan/blackjack"
+  },
+  {
+    "path": "/ten-thousand-yuan/baccarat"
+  },
+  {
+    "path": "/million-yuan"
+  },
+  {
+    "path": "/million-yuan/sicbo"
+  },
+  {
+    "path": "/million-yuan/blackjack"
+  },
+  {
+    "path": "/million-yuan/baccarat"
+  },
+  {
+    "path": "/million-yuan/texas"
+  },
+  {
+    "path": "/leaderboard"
+  }
+]
